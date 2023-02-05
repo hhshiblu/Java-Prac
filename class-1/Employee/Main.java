@@ -1,14 +1,12 @@
-/**
- * Main
- */
 public class Main {
-
+    
     public static void main(String[] args) {
         
-        Student obj1 = new Student();
-        obj1.age=20;
-        obj1.cgpa=5.6f;
+        Employee obj1 = new Employee();
+
+        obj1.selary=20000000;
         obj1.name="hasan";
+      
         obj1.display();
 
     }
