@@ -7,7 +7,7 @@ public class Main {
         object.height=20;
         object.width=30;
         object.length=10;
-        object.calculate_area();
+         object.calculate_area();
         
         
     }
