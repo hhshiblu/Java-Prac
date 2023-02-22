@@ -1,4 +1,4 @@
-public class Employee {
+public class Employee  {
     private double salary;
 
     private String name;
@@ -9,7 +9,7 @@ public class Employee {
     }
 
     public Employee(double x, String b) {
-        System.out.println("Stuent details");
+        System.out.println("Student details");
         this.salary = x;
         this.name = b;
 
@@ -22,5 +22,6 @@ public class Employee {
     public String getName() {
         return name;
     }
+    
 
 }
