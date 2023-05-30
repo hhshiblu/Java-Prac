@@ -12,7 +12,7 @@ public class Administrator extends Employee {
         return department;
     }
 
-    public String toString() {
-        return super.toString() + ", Administrator in " + department;
+    public String getDetails() {
+        return super.getDetails() + ", Administrator in " + department;
     }
 }

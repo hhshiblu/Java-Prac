@@ -1,8 +1,8 @@
 public class Administrator extends Employee {
     private String department;
 
-    public Administrator(int employeeID, String name, double salary, String department) {
-        super(employeeID, name, salary);
+    public Administrator(int empID, String name, double salary, String department) {
+        super(empID, name, salary);
         this.department = department;
     }
 

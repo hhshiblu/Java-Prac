@@ -1,16 +1,16 @@
 public class Employee {
-    private int employeeID;
+    private int empID;
     private String name;
     private double salary;
 
-    public Employee(int employeeID, String name, double salary) {
-        this.employeeID = employeeID;
+    public Employee(int empID, String name, double salary) {
+        this.empID = empID;
         this.name = name;
         this.salary = salary;
     }
 
     public int getEmployeeID() {
-        return employeeID;
+        return empID;
     }
 
     public String getName() {
@@ -22,7 +22,7 @@ public class Employee {
     }
 
     public String toString() {
-        return "Employee    " + employeeID + ": " + name + " ($" + salary + ")";
+        return "Employee    " + empID + ": " + name + " ($" + salary + ")";
     }
 
     public static double totalSalary(Employee[] employees) {

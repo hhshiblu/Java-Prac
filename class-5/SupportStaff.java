@@ -1,8 +1,8 @@
 public class SupportStaff extends Employee {
     private String jobTitle;
 
-    public SupportStaff(int employeeID, String name, double salary, String jobTitle) {
-        super(employeeID, name, salary);
+    public SupportStaff(int empID, String name, double salary, String jobTitle) {
+        super(empID, name, salary);
         this.jobTitle = jobTitle;
     }
 
@@ -11,6 +11,6 @@ public class SupportStaff extends Employee {
     }
 
     public String toString() {
-        return super.toString() + ", " + jobTitle;
+        return super.toString() + ", job post is " + jobTitle;
     }
 }

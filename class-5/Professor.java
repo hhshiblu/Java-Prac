@@ -1,8 +1,8 @@
 public class Professor extends Employee {
     private String subjectOfExpertise;
 
-    public Professor(int employeeID, String name, double salary, String subjectOfExpertise) {
-        super(employeeID, name, salary);
+    public Professor(int empID, String name, double salary, String subjectOfExpertise) {
+        super(empID, name, salary);
         this.subjectOfExpertise = subjectOfExpertise;
     }
 
