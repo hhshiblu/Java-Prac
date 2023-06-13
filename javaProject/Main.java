@@ -1,35 +1,26 @@
-
+package javaProject;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
-
-        // Create a new TaskList object
         TaskList taskList = new TaskList("Work Tasks");
 
-        // Create a new Scanner object to read input from the user
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
 
-        // Loop until the user wants to exit
         while (!exit) {
-
-            // Print out the menu options
             System.out.println("Enter your choice:");
             System.out.println("1. Add a task");
-            System.out.println("2. Read a task");
-            System.out.println("3. Delete a task");
+            System.out.println("2. Delete a task");
+            System.out.println("3. Display tasks");
             System.out.println("4. Exit");
 
             int choice = scanner.nextInt();
             scanner.nextLine();
 
             switch (choice) {
-
-                // Add a new task
                 case 1:
                     System.out.println("Enter task description:");
                     String description = scanner.nextLine();
@@ -42,33 +33,15 @@ public class Main {
                     System.out.println("Task added successfully!");
                     break;
 
-                // Read a task
                 case 2:
-                    System.out.println("Enter the index of the task to read:");
-                    int readIndex = scanner.nextInt();
+                    System.out.println("Enter the index of the task to delete:");
+                    int index = scanner.nextInt();
                     scanner.nextLine();
 
                     ArrayList<Task> taskListTasks = taskList.getTasks();
 
-                    if (readIndex >= 0 && readIndex < taskListTasks.size()) {
-                        Task taskToRead = taskListTasks.get(readIndex);
-                        System.out.println("Task at index " + readIndex + ":");
-                        taskToRead.display();
-                    } else {
-                        System.out.println("Invalid index!");
-                    }
-                    break;
-
-                // Delete a task
-                case 3:
-                    System.out.println("Enter the index of the task to delete:");
-                    int deleteIndex = scanner.nextInt();
-                    scanner.nextLine();
-
-                    ArrayList<Task> taskListTasksToDelete = taskList.getTasks();
-
-                    if (deleteIndex >= 0 && deleteIndex < taskListTasksToDelete.size()) {
-                        Task taskToDelete = taskListTasksToDelete.get(deleteIndex);
+                    if (index >= 0 && index < taskListTasks.size()) {
+                        Task taskToDelete = taskListTasks.get(index);
                         taskList.removeTask(taskToDelete);
                         System.out.println("Task deleted successfully!");
                     } else {
@@ -76,20 +49,21 @@ public class Main {
                     }
                     break;
 
-                // Exit the program
+                case 3:
+                    taskList.display();
+                    break;
+
                 case 4:
                     exit = true;
                     break;
 
-                // If the user enters an invalid choice, print out an error message
                 default:
                     System.out.println("Invalid choice. Please try again.");
                     break;
             }
         }
 
-        // Close the scanner object
-        scanner.close();
+        scanner.close(); // Closing the Scanner object
 
         System.out.println("Goodbye!");
     }

@@ -4,7 +4,7 @@ public class Array {
 
     public static void main(String[] args) {
         // Create an ArrayList of integers.
-        
+
         ArrayList<Integer> list = new ArrayList<>();
         list.add(10);
         list.add(5);

@@ -1,7 +1,7 @@
 
 class AbOverridding extends AbStrac {
 
-    //@Override
+    // @Override
 
     void show() {
         System.out.println(" I love java overridding");

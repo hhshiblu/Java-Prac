@@ -7,6 +7,6 @@ public class Square extends Shape {
 
     @Override
     public void erase() {
-        System.out.println("Erasing a square with side " );
+        System.out.println("Erasing a square with side ");
     }
 }

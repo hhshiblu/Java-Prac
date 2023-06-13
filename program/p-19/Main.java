@@ -4,15 +4,11 @@ public class Main extends Exception {
         super(message);
     }
 
-
-
-
     public static void main(String[] args) {
         try {
             // Do something that might throw an exception
             throw new Main("This is my custom exception");
-        } 
-        catch (Main e) {
+        } catch (Main e) {
             // Handle the exception
             System.out.println(e.getMessage());
         }

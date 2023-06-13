@@ -7,6 +7,6 @@ public class Triangle extends Shape {
 
     @Override
     public void erase() {
-        System.out.println("Erasing a triangle with sides " );
+        System.out.println("Erasing a triangle with sides ");
     }
 }

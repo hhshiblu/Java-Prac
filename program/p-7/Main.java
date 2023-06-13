@@ -4,7 +4,7 @@ public class Main {
         Shape object = new Shape();
         object.draw();
         object.erase();
-        
+
         Shape shape = new Circle();
         shape.draw();
         shape.erase();
