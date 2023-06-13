@@ -1,5 +1,4 @@
 
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -58,9 +57,31 @@ public class Main {
                         System.out.println("Invalid index!");
                     }
                     break;
-
-                // Delete a task
+                // update
                 case 3:
+                    System.out.println("Enter the index of the task to update:");
+                    int updateIndex = scanner.nextInt();
+                    scanner.nextLine();
+
+                    ArrayList<Task> taskListTasksToUpdate = taskList.getTasks();
+
+                    if (updateIndex >= 0 && updateIndex < taskListTasksToUpdate.size()) {
+                        Task taskToUpdate = taskListTasksToUpdate.get(updateIndex);
+                        System.out.println("Enter new task description:");
+                        String newDescription = scanner.nextLine();
+                        System.out.println("Enter new task priority:");
+                        int newPriority = scanner.nextInt();
+                        scanner.nextLine();
+
+                        taskToUpdate.setDescription(newDescription);
+                        taskToUpdate.setPriority(newPriority);
+                        System.out.println("Task updated successfully!");
+                    } else {
+                        System.out.println("Invalid index!");
+                    }
+                    break;
+                // Delete a task
+                case 4:
                     System.out.println("Enter the index of the task to delete:");
                     int deleteIndex = scanner.nextInt();
                     scanner.nextLine();
@@ -77,7 +98,7 @@ public class Main {
                     break;
 
                 // Exit the program
-                case 4:
+                case 5:
                     exit = true;
                     break;
 
