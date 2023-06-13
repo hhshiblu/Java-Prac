@@ -1,8 +1,5 @@
-
-// abstract class this  
-
- abstract class Task {
-    private String description;
+abstract class Task {
+    protected String description;
     private boolean isComplete;
 
     public Task(String description) {
@@ -23,4 +20,8 @@
     public String getDescription() {
         return description;
     }
+
+    public abstract void setDescription(String description);
+
+    public abstract void setPriority(int priority);
 }

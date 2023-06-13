@@ -1,12 +1,13 @@
 import java.util.ArrayList;
 
 // Concrete class representing a task list
-public class TaskList extends Task {
+class TaskList {
+    private String name;
     private ArrayList<Task> tasks;
 
-    public TaskList(String description) {
-        super(description);
-        tasks = new ArrayList<>();
+    public TaskList(String name) {
+        this.name = name;
+        this.tasks = new ArrayList<>();
     }
 
     public void addTask(Task task) {
@@ -21,13 +22,14 @@ public class TaskList extends Task {
         return tasks;
     }
 
-    @Override
     public void display() {
-        System.out.println("----- " + getDescription() + " -----");
-        for (Task task : tasks) {
-            task.display();
+        if (tasks.isEmpty()) {
+            System.out.println("No tasks found.");
+        } else {
+            System.out.println("Task List: " + name);
+            for (Task task : tasks) {
+                task.display();
+            }
         }
-        System.out.println("-------------------------------");
     }
 }
-

@@ -20,8 +20,9 @@ public class Main {
             System.out.println("Enter your choice:");
             System.out.println("1. Add a task");
             System.out.println("2. Read a task");
-            System.out.println("3. Delete a task");
-            System.out.println("4. Exit");
+            System.out.println("3. update task");
+            System.out.println("4. delete task");
+            System.out.println("5. Exit");
 
             int choice = scanner.nextInt();
             scanner.nextLine();
