@@ -6,11 +6,29 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // User credentials for accessing the task manager
+        String email = "shiblu@gmail.com";
+        String password = "shiblu";
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter your email:");
+        String inputEmail = scanner.nextLine();
+
+        System.out.println("Enter your password:");
+        String inputPassword = scanner.nextLine();
+
+        if (!inputEmail.equals(email) || !inputPassword.equals(password)) {
+            System.out.println("Invalid email or password. Access denied.");
+            scanner.close();
+            return;
+        }
+
         // Create a new TaskList object
         TaskList taskList = new TaskList("Work Tasks");
 
         // Create a new Scanner object to read input from the user
-        Scanner scanner = new Scanner(System.in);
+
         boolean exit = false;
 
         // Loop until the user wants to exit
